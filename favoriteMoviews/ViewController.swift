@@ -7,22 +7,33 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableview:UITableView!
-    @IBOutlet weak var imageTableCell:UIImage!
-    @IBOutlet weak var titleMovieLabel:UILabel!
+   
     
     var allMovies = [Movies]()
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        tableview.delegate = self
+        tableview.dataSource = self
     }
     
  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    return UITableViewCell();
+    if let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell") as? MovieCell{
+        let movie = allMovies[indexPath.row]
+         cell.configureCell(movie)
+        return cell
+    } else {
+        return MovieCell()
+    }
+
+    
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

@@ -7,18 +7,24 @@
 //
 
 import UIKit
+import CoreData
 
 class MovieCell: UITableViewCell {
+    
+    @IBOutlet weak var movieTitle:UILabel!
+    @IBOutlet weak var movieImg:UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func configureCell(movie:Movies){
+        movieTitle.text = movie.movieTitle
+        movieImg.image = movie.retrieveImg()
+        
     }
+
+
 
 }
