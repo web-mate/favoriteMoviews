@@ -78,15 +78,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableview" destination="ysC-O2-1HS" id="xty-MU-pQf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1152" y="356"/>
         </scene>
-        <!--View Controller-->
+        <!--Add MoviewVC-->
         <scene sceneID="cml-MZ-wYR">
             <objects>
-                <viewController id="Fuv-Fg-Nwn" sceneMemberID="viewController">
+                <viewController id="Fuv-Fg-Nwn" customClass="AddMoviewVC" customModule="favoriteMoviews" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bGr-a6-zh5"/>
                         <viewControllerLayoutGuide type="bottom" id="VtB-aP-efK"/>
@@ -141,10 +144,16 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addImage:" destination="Fuv-Fg-Nwn" eventType="touchUpInside" id="CC6-am-YZR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEH-yj-8cP">
                                 <rect key="frame" x="264" y="516" width="73" height="30"/>
                                 <state key="normal" title="Add Movie"/>
+                                <connections>
+                                    <action selector="createMovie:" destination="Fuv-Fg-Nwn" eventType="touchUpInside" id="XsH-aY-6sM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -155,11 +164,20 @@
                             <constraint firstItem="wz5-Wc-QiI" firstAttribute="centerX" secondItem="8Ne-Ke-9hx" secondAttribute="centerX" id="S3P-ah-082"/>
                             <constraint firstItem="CEH-yj-8cP" firstAttribute="top" secondItem="wz5-Wc-QiI" secondAttribute="bottom" constant="54" id="TH2-Tf-GqD"/>
                             <constraint firstItem="wz5-Wc-QiI" firstAttribute="top" secondItem="fE1-FR-Zb5" secondAttribute="bottom" constant="27" id="Xz1-H6-v7a"/>
+                            <constraint firstItem="w16-bm-Bdb" firstAttribute="height" secondItem="wz5-Wc-QiI" secondAttribute="height" id="aXb-Pb-Wuh"/>
                             <constraint firstItem="fE1-FR-Zb5" firstAttribute="top" secondItem="bGr-a6-zh5" secondAttribute="bottom" id="beK-cV-SVe"/>
                             <constraint firstItem="fE1-FR-Zb5" firstAttribute="leading" secondItem="8Ne-Ke-9hx" secondAttribute="leading" id="dK3-Yd-Ctz"/>
                             <constraint firstItem="w16-bm-Bdb" firstAttribute="centerX" secondItem="wz5-Wc-QiI" secondAttribute="centerX" id="liN-cB-r3X"/>
+                            <constraint firstItem="w16-bm-Bdb" firstAttribute="width" secondItem="wz5-Wc-QiI" secondAttribute="width" id="uJ6-fo-TzB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addMovieButton" destination="CEH-yj-8cP" id="J5K-Uy-bD3"/>
+                        <outlet property="movieDesc" destination="i8f-aC-rvv" id="AMc-8n-3Kn"/>
+                        <outlet property="movieImdb" destination="32P-BE-o6R" id="6lV-oV-mSq"/>
+                        <outlet property="movieImg" destination="wz5-Wc-QiI" id="1cO-48-fVa"/>
+                        <outlet property="movieTitle" destination="qtM-eg-FgK" id="NFT-GY-Qc3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YwC-Lt-cH8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

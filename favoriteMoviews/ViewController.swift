@@ -15,13 +15,30 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
    
     
     var allMovies = [Movies]()
-
+    var fetchResultsController : NSFetchedResultsController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableview.delegate = self
         tableview.dataSource = self
+    }
+  override func viewDidAppear(animated: Bool) {
+        fetchAndSetResults()
+    tableview.reloadData()
+    }
+    
+    func fetchAndSetResults() {
+        let app = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context = app.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: "Movies")
+        do {
+            let results = try context.executeFetchRequest(fetchRequest)
+            self.allMovies = results as! [Movies]
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+        
     }
     
  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
