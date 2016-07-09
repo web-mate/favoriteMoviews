@@ -19,6 +19,7 @@
 		B3AB40C51D2839C10018FA37 /* Movies+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AB40C31D2839C10018FA37 /* Movies+CoreDataProperties.swift */; };
 		B3AB40C61D2839C10018FA37 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AB40C41D2839C10018FA37 /* Movies.swift */; };
 		B3AB40C81D283C040018FA37 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AB40C71D283C040018FA37 /* MovieCell.swift */; };
+		B3ACDA871D2E447E00FDF491 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ACDA861D2E447E00FDF491 /* DetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		B3AB40C31D2839C10018FA37 /* Movies+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Movies+CoreDataProperties.swift"; path = "../Movies+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B3AB40C41D2839C10018FA37 /* Movies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movies.swift; path = ../Movies.swift; sourceTree = "<group>"; };
 		B3AB40C71D283C040018FA37 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		B3ACDA861D2E447E00FDF491 /* DetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			children = (
 				B3AB408C1D281D170018FA37 /* ViewController.swift */,
 				B3AB40BF1D2835190018FA37 /* AddMoviewVC.swift */,
+				B3ACDA861D2E447E00FDF491 /* DetailsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3AB40C81D283C040018FA37 /* MovieCell.swift in Sources */,
+				B3ACDA871D2E447E00FDF491 /* DetailsVC.swift in Sources */,
 				B3AB408D1D281D170018FA37 /* ViewController.swift in Sources */,
 				B3AB40C01D2835190018FA37 /* AddMoviewVC.swift in Sources */,
 				B3AB40C61D2839C10018FA37 /* Movies.swift in Sources */,
