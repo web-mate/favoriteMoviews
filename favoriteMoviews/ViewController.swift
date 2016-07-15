@@ -13,9 +13,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableview:UITableView!
    
-    
+    var mySelection: Int?
     var allMovies = [Movies]()
     var fetchResultsController : NSFetchedResultsController!
+    
+    var viewSelectedMovieName: String = ""
+    var viewSelectedMovieDesc: String = ""
+    var viewSelectedMovieimdb: String = ""
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +47,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
     }
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+
+    
     
  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     if let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell") as? MovieCell{
@@ -61,7 +73,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allMovies.count
     }
-  
+    
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.tableview.deselectRowAtIndexPath(indexPath, animated: true)
+        let movie = allMovies[indexPath.row]
+        let destinationVC = DetailsVC()
+        destinationVC.programVar = movie
+      
+        performSegueWithIdentifier("detailsSeque", sender: destinationVC.programVar)
+
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "detailsSeque") {
+            let secondViewController = segue.destinationViewController as! DetailsVC
+            let duration = sender as! Movies
+            secondViewController.programVar = duration
+        }
+    }
+    
 
 
 }

@@ -45,12 +45,6 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEv-8c-AKJ">
-                                                    <rect key="frame" x="0.0" y="3" width="600" height="68"/>
-                                                    <connections>
-                                                        <segue destination="6ts-G3-3e1" kind="show" identifier="detailsSeque" id="Wiv-cR-A8m"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="OYS-NZ-BZY" firstAttribute="top" secondItem="56R-fQ-7u8" secondAttribute="top" constant="8" id="7nt-J6-Xqe"/>
@@ -61,10 +55,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.8028429187029491" blue="0.23269992094804892" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="QEv-8c-AKJ" firstAttribute="height" secondItem="985-as-x4G" secondAttribute="height" id="jk0-J6-4pV"/>
-                                            <constraint firstItem="QEv-8c-AKJ" firstAttribute="width" secondItem="985-as-x4G" secondAttribute="width" id="uQO-Ke-Ieq"/>
-                                        </constraints>
                                         <connections>
                                             <outlet property="movieImg" destination="OYS-NZ-BZY" id="F5C-iz-Pfw"/>
                                             <outlet property="movieTitle" destination="kaY-VS-wMU" id="z0f-P7-V43"/>
@@ -90,6 +80,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableview" destination="ysC-O2-1HS" id="xty-MU-pQf"/>
+                        <segue destination="6ts-G3-3e1" kind="show" identifier="detailsSeque" id="FBh-Og-WOW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -193,10 +184,10 @@
             </objects>
             <point key="canvasLocation" x="1854" y="65"/>
         </scene>
-        <!--View Controller-->
+        <!--DetailsVC-->
         <scene sceneID="PUK-9H-FlJ">
             <objects>
-                <viewController id="6ts-G3-3e1" sceneMemberID="viewController">
+                <viewController id="6ts-G3-3e1" customClass="DetailsVC" customModule="favoriteMoviews" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cGP-PK-WHZ"/>
                         <viewControllerLayoutGuide type="bottom" id="i7U-Fm-yMg"/>
@@ -253,6 +244,12 @@
                             <constraint firstAttribute="trailing" secondItem="8HS-aL-RZS" secondAttribute="trailing" constant="20" id="zxy-cu-6Ah"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descTitleMovie" destination="utl-8T-3dh" id="aZu-mN-BRC"/>
+                        <outlet property="imageOfMovie" destination="8HS-aL-RZS" id="aOn-Cb-L0i"/>
+                        <outlet property="imdbTitleMov" destination="nlg-bk-IeT" id="URJ-N7-Zvp"/>
+                        <outlet property="titleMovieDetail" destination="V7M-R3-ZeF" id="q8P-P2-A7i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pfl-jY-hRr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

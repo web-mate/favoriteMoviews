@@ -161,8 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				B3AB408C1D281D170018FA37 /* ViewController.swift */,
-				B3AB40BF1D2835190018FA37 /* AddMoviewVC.swift */,
 				B3ACDA861D2E447E00FDF491 /* DetailsVC.swift */,
+				B3AB40BF1D2835190018FA37 /* AddMoviewVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
