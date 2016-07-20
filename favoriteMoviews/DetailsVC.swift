@@ -11,9 +11,9 @@ import CoreData
 
 class DetailsVC: UIViewController {
     
+    @IBOutlet weak var imdburl: UITextView!
     @IBOutlet weak var imageOfMovie: UIImageView!
     @IBOutlet weak var descTitleMovie: UILabel!
-    @IBOutlet weak var imdbTitleMov: UILabel!
     @IBOutlet weak var titleMovieDetail: UILabel!
 
     var programVar : Movies?
@@ -28,7 +28,7 @@ class DetailsVC: UIViewController {
         }
     }
     func configureMovieData(movie:Movies) {
-        imdbTitleMov.text = movie.movieimdb
+        imdburl.text = movie.movieimdb
         descTitleMovie.text = movie.movieDescription
         titleMovieDetail.text = movie.movieTitle
         imageOfMovie.image = movie.retrieveImg()

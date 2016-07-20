@@ -36,7 +36,7 @@
                                                         <constraint firstAttribute="height" constant="58.5" id="aal-U5-WYp"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Movie Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaY-VS-wMU">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaY-VS-wMU">
                                                     <rect key="frame" x="158" y="27" width="434" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="1yi-ub-YoU"/>
@@ -50,6 +50,7 @@
                                                 <constraint firstItem="OYS-NZ-BZY" firstAttribute="top" secondItem="56R-fQ-7u8" secondAttribute="top" constant="8" id="7nt-J6-Xqe"/>
                                                 <constraint firstItem="kaY-VS-wMU" firstAttribute="trailing" secondItem="56R-fQ-7u8" secondAttribute="trailingMargin" id="7oq-4l-2Zr"/>
                                                 <constraint firstAttribute="bottom" secondItem="OYS-NZ-BZY" secondAttribute="bottom" constant="8" id="Bly-uy-APM"/>
+                                                <constraint firstItem="kaY-VS-wMU" firstAttribute="centerY" secondItem="56R-fQ-7u8" secondAttribute="centerY" id="PIZ-81-w7N"/>
                                                 <constraint firstItem="OYS-NZ-BZY" firstAttribute="leading" secondItem="56R-fQ-7u8" secondAttribute="leading" constant="20" id="aQv-IL-8Uk"/>
                                                 <constraint firstItem="kaY-VS-wMU" firstAttribute="leading" secondItem="OYS-NZ-BZY" secondAttribute="trailing" constant="22" id="uTe-CP-LTh"/>
                                             </constraints>
@@ -196,18 +197,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title of Movie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7M-R3-ZeF">
-                                <rect key="frame" x="179" y="100" width="243" height="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Movie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7M-R3-ZeF">
+                                <rect key="frame" x="237" y="100" width="127" height="26"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
                                 <color key="textColor" red="0.45441344895287961" green="0.45441344895287961" blue="0.45441344895287961" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="best-movies-hbo-godfather" translatesAutoresizingMaskIntoConstraints="NO" id="8HS-aL-RZS">
-                                <rect key="frame" x="20" y="159" width="560" height="176"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="best-movies-hbo-godfather" translatesAutoresizingMaskIntoConstraints="NO" id="8HS-aL-RZS">
+                                <rect key="frame" x="20" y="134" width="560" height="176"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="176" id="E2F-Qh-91b"/>
-                                    <constraint firstAttribute="height" constant="189" id="Kcc-Xs-19B"/>
+                                    <constraint firstAttribute="height" constant="176" id="Kcc-Xs-19B"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -215,53 +216,61 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="IMDB Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlg-bk-IeT">
-                                <rect key="frame" x="20" y="362" width="200" height="28"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utl-8T-3dh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utl-8T-3dh">
                                 <rect key="frame" x="20" y="405" width="560" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="Obu-Cq-tpP"/>
+                                </constraints>
                                 <string key="text">test it is a test i wa test again adna agiann ena  allo ena ena allo allo ena kai alol ena pies allo enant to test it a new test test test and again test and ei titest a ilove to test</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="IMDB TITLE" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0En-d8-7Ap">
+                                <rect key="frame" x="20" y="351" width="421" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Eon-Jy-zfw"/>
+                                    <constraint firstAttribute="width" constant="421" id="j88-rC-D5V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8HS-aL-RZS" firstAttribute="centerX" secondItem="FCi-vt-3r4" secondAttribute="centerX" id="3JE-EH-iac"/>
-                            <constraint firstItem="nlg-bk-IeT" firstAttribute="leading" secondItem="FCi-vt-3r4" secondAttribute="leading" constant="20" id="BTh-j9-MUA"/>
+                            <constraint firstItem="i7U-Fm-yMg" firstAttribute="top" secondItem="utl-8T-3dh" secondAttribute="bottom" constant="106" id="9YP-BF-l8G"/>
                             <constraint firstItem="utl-8T-3dh" firstAttribute="leading" secondItem="FCi-vt-3r4" secondAttribute="leading" constant="20" id="DTh-nI-4SK"/>
-                            <constraint firstItem="nlg-bk-IeT" firstAttribute="top" secondItem="8HS-aL-RZS" secondAttribute="bottom" constant="27" id="HBS-c8-sxM"/>
-                            <constraint firstItem="utl-8T-3dh" firstAttribute="top" secondItem="nlg-bk-IeT" secondAttribute="bottom" constant="15" id="IMX-Un-wpW"/>
                             <constraint firstAttribute="trailing" secondItem="utl-8T-3dh" secondAttribute="trailing" constant="20" id="MSu-Qz-vj5"/>
                             <constraint firstAttribute="trailing" secondItem="utl-8T-3dh" secondAttribute="trailing" constant="20" id="NxB-EP-OlT"/>
-                            <constraint firstItem="utl-8T-3dh" firstAttribute="top" secondItem="nlg-bk-IeT" secondAttribute="bottom" constant="15" id="Pys-qg-LjN"/>
-                            <constraint firstItem="nlg-bk-IeT" firstAttribute="top" secondItem="8HS-aL-RZS" secondAttribute="bottom" constant="27" id="UKE-Yn-jdD"/>
-                            <constraint firstItem="nlg-bk-IeT" firstAttribute="leading" secondItem="8HS-aL-RZS" secondAttribute="leading" id="ccs-u3-9yf"/>
+                            <constraint firstItem="utl-8T-3dh" firstAttribute="leading" secondItem="0En-d8-7Ap" secondAttribute="leading" id="T8g-JQ-PzW"/>
+                            <constraint firstItem="utl-8T-3dh" firstAttribute="top" secondItem="0En-d8-7Ap" secondAttribute="bottom" constant="18" id="bg4-8c-HZS"/>
                             <constraint firstItem="V7M-R3-ZeF" firstAttribute="top" secondItem="cGP-PK-WHZ" secondAttribute="bottom" constant="36" id="d2e-wL-eW3"/>
+                            <constraint firstItem="0En-d8-7Ap" firstAttribute="top" secondItem="8HS-aL-RZS" secondAttribute="bottom" constant="41" id="dCz-yk-ka5"/>
                             <constraint firstItem="V7M-R3-ZeF" firstAttribute="centerX" secondItem="FCi-vt-3r4" secondAttribute="centerX" id="eeN-z3-2vt"/>
                             <constraint firstItem="utl-8T-3dh" firstAttribute="leading" secondItem="FCi-vt-3r4" secondAttribute="leading" constant="20" id="grE-60-joj"/>
-                            <constraint firstItem="8HS-aL-RZS" firstAttribute="top" secondItem="V7M-R3-ZeF" secondAttribute="bottom" constant="21" id="j9C-jB-Jsu"/>
+                            <constraint firstItem="i7U-Fm-yMg" firstAttribute="top" secondItem="utl-8T-3dh" secondAttribute="bottom" constant="106" id="hhR-4o-iDD"/>
+                            <constraint firstItem="8HS-aL-RZS" firstAttribute="top" secondItem="V7M-R3-ZeF" secondAttribute="bottom" constant="8.5" id="j9C-jB-Jsu"/>
+                            <constraint firstItem="0En-d8-7Ap" firstAttribute="leading" secondItem="FCi-vt-3r4" secondAttribute="leading" constant="20" id="lrK-aq-mBw"/>
+                            <constraint firstItem="utl-8T-3dh" firstAttribute="top" secondItem="0En-d8-7Ap" secondAttribute="bottom" constant="18" id="oB1-cG-fhR"/>
                             <constraint firstItem="8HS-aL-RZS" firstAttribute="leading" secondItem="FCi-vt-3r4" secondAttribute="leading" constant="20" id="tQa-91-Fe2"/>
                             <constraint firstAttribute="trailing" secondItem="8HS-aL-RZS" secondAttribute="trailing" constant="20" id="zxy-cu-6Ah"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="UKE-Yn-jdD"/>
-                                <exclude reference="ccs-u3-9yf"/>
                                 <exclude reference="MSu-Qz-vj5"/>
-                                <exclude reference="Pys-qg-LjN"/>
                                 <exclude reference="grE-60-joj"/>
+                                <exclude reference="9YP-BF-l8G"/>
+                                <exclude reference="hhR-4o-iDD"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="descTitleMovie" destination="utl-8T-3dh" id="aZu-mN-BRC"/>
                         <outlet property="imageOfMovie" destination="8HS-aL-RZS" id="aOn-Cb-L0i"/>
-                        <outlet property="imdbTitleMov" destination="nlg-bk-IeT" id="URJ-N7-Zvp"/>
+                        <outlet property="imdburl" destination="0En-d8-7Ap" id="noP-RY-RLA"/>
                         <outlet property="titleMovieDetail" destination="V7M-R3-ZeF" id="q8P-P2-A7i"/>
                     </connections>
                 </viewController>
