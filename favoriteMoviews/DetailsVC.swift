@@ -21,16 +21,16 @@ class DetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-         print(programVar)
+        
         if let prag = programVar {
         configureMovieData(prag)
            
         }
     }
     func configureMovieData(movie:Movies) {
-        imdbTitleMov.text = movie.movieTitle
-        descTitleMovie.text = movie.movieimdb
-        titleMovieDetail.text = movie.movieDescription
+        imdbTitleMov.text = movie.movieimdb
+        descTitleMovie.text = movie.movieDescription
+        titleMovieDetail.text = movie.movieTitle
         imageOfMovie.image = movie.retrieveImg()
     }
 

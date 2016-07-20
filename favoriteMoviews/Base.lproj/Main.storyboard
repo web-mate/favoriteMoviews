@@ -54,7 +54,7 @@
                                                 <constraint firstItem="kaY-VS-wMU" firstAttribute="leading" secondItem="OYS-NZ-BZY" secondAttribute="trailing" constant="22" id="uTe-CP-LTh"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.8028429187029491" blue="0.23269992094804892" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.97128599476439792" green="0.96973692108972742" blue="0.93766489919354501" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="movieImg" destination="OYS-NZ-BZY" id="F5C-iz-Pfw"/>
                                             <outlet property="movieTitle" destination="kaY-VS-wMU" id="z0f-P7-V43"/>
@@ -232,7 +232,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8HS-aL-RZS" firstAttribute="centerX" secondItem="FCi-vt-3r4" secondAttribute="centerX" id="3JE-EH-iac"/>
+                            <constraint firstItem="nlg-bk-IeT" firstAttribute="leading" secondItem="FCi-vt-3r4" secondAttribute="leading" constant="20" id="BTh-j9-MUA"/>
+                            <constraint firstItem="utl-8T-3dh" firstAttribute="leading" secondItem="FCi-vt-3r4" secondAttribute="leading" constant="20" id="DTh-nI-4SK"/>
+                            <constraint firstItem="nlg-bk-IeT" firstAttribute="top" secondItem="8HS-aL-RZS" secondAttribute="bottom" constant="27" id="HBS-c8-sxM"/>
+                            <constraint firstItem="utl-8T-3dh" firstAttribute="top" secondItem="nlg-bk-IeT" secondAttribute="bottom" constant="15" id="IMX-Un-wpW"/>
                             <constraint firstAttribute="trailing" secondItem="utl-8T-3dh" secondAttribute="trailing" constant="20" id="MSu-Qz-vj5"/>
+                            <constraint firstAttribute="trailing" secondItem="utl-8T-3dh" secondAttribute="trailing" constant="20" id="NxB-EP-OlT"/>
                             <constraint firstItem="utl-8T-3dh" firstAttribute="top" secondItem="nlg-bk-IeT" secondAttribute="bottom" constant="15" id="Pys-qg-LjN"/>
                             <constraint firstItem="nlg-bk-IeT" firstAttribute="top" secondItem="8HS-aL-RZS" secondAttribute="bottom" constant="27" id="UKE-Yn-jdD"/>
                             <constraint firstItem="nlg-bk-IeT" firstAttribute="leading" secondItem="8HS-aL-RZS" secondAttribute="leading" id="ccs-u3-9yf"/>
@@ -243,6 +248,15 @@
                             <constraint firstItem="8HS-aL-RZS" firstAttribute="leading" secondItem="FCi-vt-3r4" secondAttribute="leading" constant="20" id="tQa-91-Fe2"/>
                             <constraint firstAttribute="trailing" secondItem="8HS-aL-RZS" secondAttribute="trailing" constant="20" id="zxy-cu-6Ah"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="UKE-Yn-jdD"/>
+                                <exclude reference="ccs-u3-9yf"/>
+                                <exclude reference="MSu-Qz-vj5"/>
+                                <exclude reference="Pys-qg-LjN"/>
+                                <exclude reference="grE-60-joj"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="descTitleMovie" destination="utl-8T-3dh" id="aZu-mN-BRC"/>

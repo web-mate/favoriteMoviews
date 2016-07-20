@@ -26,10 +26,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableview.delegate = self
         tableview.dataSource = self
+        self.automaticallyAdjustsScrollViewInsets = false
     }
+    
   override func viewDidAppear(animated: Bool) {
         fetchAndSetResults()
     tableview.reloadData()
@@ -47,9 +48,30 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
     }
+    
+    //added delete functionality
+    
+     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let context:NSManagedObjectContext = appDel.managedObjectContext
+            context.deleteObject(allMovies[indexPath.row] )
+            allMovies.removeAtIndex(indexPath.row)
+            do {
+                try context.save()
+            } catch _ {
+            }
+            
+            // remove the deleted item from the `UITableView`
+            tableview.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        } 
+    }
+
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
         return true
     }
+   
 
     
     
